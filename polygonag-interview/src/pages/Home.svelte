@@ -5,7 +5,7 @@
 <main>
     <div class="home-container">
         <img src={VimLogo} alt="Vim" />
-        <p>La correcta instalación de vidrio es crucial para el éxito de un diseño arquitectónico. Utilizamos técnicas avanzadas y herramientas de última generación para cumplir con los requisitos de diseño y las necesidades de nuestros clientes, asegurando una instalación segura y precisa.</p>
+        <p>La correcta instalacion de vidrio es crucial para el exito de un diseno arquitectonico. Utilizamos tecnicas avanzadas y herramientas de ultima generacion para cumplir con los requisitos de diseno y las necesidades de nuestros clientes, asegurando una instalacion segura y precisa.</p>
     </div>
 </main>
 
@@ -20,6 +20,8 @@
         top: 200px;
         text-align: center;
         z-index: 0;
+        font-family: 'Termina-Light';
+        font-size: 15px;
     }
 
     .home-container img{

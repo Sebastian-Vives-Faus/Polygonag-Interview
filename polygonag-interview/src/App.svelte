@@ -30,7 +30,7 @@
       <Home/>
       <ProyectsColumn/>
       <div class="footer">
-        Ver más proyectos <span class="material-symbols-outlined" on:click={() => {document.body.scrollIntoView();router.set(2);}}>
+        Ver mas proyectos <span class="material-symbols-outlined" on:click={() => {document.body.scrollIntoView();router.set(2);}}>
           arrow_forward
           </span>
       </div>
@@ -72,6 +72,7 @@
     display: flex;
     justify-content: center;
     font-size: 14px;
-    
+    font-family: 'Termina-Medium';
+    align-items: center;
   }
 </style>

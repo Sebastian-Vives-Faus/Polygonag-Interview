@@ -29,5 +29,11 @@
     .menu-container {
         padding: 1em;
         font-size: 24px;
+        font-family: 'Termina-Light';
+        font-size: 24px;
+    }
+
+    p{
+        margin-bottom: 40px;
     }
 </style>

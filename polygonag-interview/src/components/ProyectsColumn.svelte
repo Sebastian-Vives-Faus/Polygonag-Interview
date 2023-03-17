@@ -10,10 +10,10 @@
             id: 1, name: 'Valle de Bravo', img: Proyect1
         },
         {
-            id: 2, name: 'Ciudad de México', img: Proyect2
+            id: 2, name: 'Ciudad de Mexico', img: Proyect2
         },
         {
-            id: 3, name: 'Ciudad de México', img: Proyect3
+            id: 3, name: 'Ciudad de Mexico', img: Proyect3
         }
     ]
 </script>
@@ -24,7 +24,7 @@
         <div class="proyect-container">
             <img src={proyect.img} alt="{proyect.name}" />
             <div class="proyect-title-container">
-                <h2>{proyect.name}</h2>
+                <p>{proyect.name}</p>
             </div>
         </div>
         {/each}
@@ -38,6 +38,11 @@
        /*  margin-top: 550px; */
         z-index: 1;
         position: relative;
+    }
+
+    p {
+        font-family: 'Termina-Light';
+        font-size: 17px;
     }
 
     .home-margin {

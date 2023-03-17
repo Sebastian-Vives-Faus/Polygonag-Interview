@@ -19,6 +19,43 @@
 
 }
 
+@font-face {
+  font-family: Termina-Black;
+  src: url('/TerminaTest-Black.otf');
+}
+@font-face {
+  font-family: Termina-Bold;
+  src: url('/TerminaTest-Bold.otf');
+}
+@font-face {
+  font-family: Termina-ExtraLight;
+  src: url('/TerminaTest-ExtraLight.otf');
+}
+@font-face {
+  font-family: Termina-Heavy;
+  src: url('/TerminaTest-Heavy.otf');
+}
+@font-face {
+  font-family: Termina-Light;
+  src: url('/TerminaTest-Light.otf');
+}
+@font-face {
+  font-family: Termina-Medium;
+  src: url('/TerminaTest-Medium.otf');
+}
+@font-face {
+  font-family: Termina-Regular;
+  src: url('/TerminaTest-Regular.otf');
+}
+@font-face {
+  font-family: Termina-Thin;
+  src: url('/TerminaTest-Thin.otf');
+}
+@font-face {
+  font-family: Termina-Demi;
+  src: url('/TerminaTest-Demi.otf');
+}
+
 body {
   background-color: var(--light-grey1);
   /* height: 100%; */
