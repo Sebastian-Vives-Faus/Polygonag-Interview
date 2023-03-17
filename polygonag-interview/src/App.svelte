@@ -30,7 +30,7 @@
       <Home/>
       <ProyectsColumn/>
       <div class="footer">
-        Ver más proyectos <span class="material-symbols-outlined" on:click={() => router.set(2)}>
+        Ver más proyectos <span class="material-symbols-outlined" on:click={() => {document.body.scrollIntoView();router.set(2);}}>
           arrow_forward
           </span>
       </div>
@@ -41,7 +41,7 @@
     <Navbar/>  
     <ProyectsColumn/>
     <div class="footer">
-      <span class="material-symbols-outlined" on:click={() => router.set(0)}>
+      <span class="material-symbols-outlined" on:click={() => {document.body.scrollIntoView();router.set(0);}}>
         arrow_back
         </span> Regresar
     </div>
@@ -49,7 +49,7 @@
     <Navbar/>  
     <Nosotros/>
     <div class="footer">
-      <span class="material-symbols-outlined" on:click={() => router.set(0)}>
+      <span class="material-symbols-outlined" on:click={() => {document.body.scrollIntoView();router.set(0);}}>
         arrow_back
         </span> Regresar
     </div>
@@ -57,7 +57,7 @@
     <Navbar/>  
     <Contactanos/>
     <div class="footer">
-      <span class="material-symbols-outlined" on:click={() => router.set(0)}>
+      <span class="material-symbols-outlined" on:click={() => {document.body.scrollIntoView();router.set(0);}}>
         arrow_back
         </span> Regresar
     </div>

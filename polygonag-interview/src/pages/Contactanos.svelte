@@ -15,7 +15,7 @@
          margin-top: 120px;
          padding: 0 4em;
          flex-flow: column;
-         height: calc(100vh - 205px);
+         height: calc(100vh - 160px);
          align-items: center;
      }
 
