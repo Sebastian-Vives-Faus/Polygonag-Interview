@@ -1,5 +1,5 @@
 <script>
-    import { router } from "../stores/router";
+    import { router } from "../../stores/router";
 </script>
 
 <main>
