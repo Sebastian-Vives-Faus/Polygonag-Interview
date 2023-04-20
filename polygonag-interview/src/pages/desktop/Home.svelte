@@ -7,7 +7,7 @@
     <div class="home-container">
         <div class="home-logo">
             <img src={VimLogo} alt="Vim" />
-            <h1>PROYECTOS ÚNICOS</h1>
+            <h1>PROYECTOS UNICOS</h1>
         </div>
         <div class="home-footer">
             <p>Scroll down para ver proyectos.</p>
@@ -43,9 +43,17 @@
         display: flex;
         color: white;
         font-family: 'Termina-Light';
+        align-items: end;
     }
 
     .home-footer {
         color: white;
+    }
+
+    h1 {
+        font-family: Termina-ExtraLight;
+        font-size: 20px;
+        margin: unset;
+        margin-left: 1em;
     }
 </style>

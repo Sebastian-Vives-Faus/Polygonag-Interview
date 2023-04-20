@@ -11,6 +11,7 @@
   import SeriesUnicas from './components/SeriesUnicas.svelte';
   import DesktopFooter from './components/DesktopFooter.svelte';
   import NosotrosDesktop from './pages/desktop/Nosotros.svelte';
+  import ContactanosDesktop from './pages/desktop/Contactanos.svelte';
   
   let y;
     
@@ -96,6 +97,9 @@
               arrow_back
               </span>
           </div>
+        {:else if routerApp === 4}
+        <Navbar/>
+        <ContactanosDesktop />
         {/if}
     {/if}
   </MediaQuery>

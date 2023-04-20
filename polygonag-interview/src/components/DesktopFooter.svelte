@@ -7,7 +7,7 @@
     <div class="main-container">
         <div class="menu">
             <h1>Menu</h1>
-            <p on:click={() => {window.scrollTo(0, 0);router.set(0);}}>Contacto</p>
+            <p on:click={() => {window.scrollTo(0, 0);router.set(4);}}>Contacto</p>
             <p on:click={() => {window.scrollTo(0, 0);router.set(2);}}>Proyectos</p>
             <p on:click={() => {window.scrollTo(0, 0);router.set(3);}}>Nosotros</p>
         </div>
@@ -41,11 +41,11 @@
 
     h1 {
         font-family: Termina-Light;
-        font-size: 30px;
+        font-size: 24px;
     }
 
     p {
         font-family: Termina-Light;
-        font-size: 22px;
+        font-size: 18px;
     }
 </style>

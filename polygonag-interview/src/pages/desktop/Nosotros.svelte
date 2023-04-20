@@ -41,9 +41,10 @@
 <style>
     .main-container {
         padding: 0 166px;
-        font-family: Termina-Light;
+        font-family: Termina-ExtraLight;
         border-bottom: 1px solid grey;
         background-color: white;
+        height: 70vh;
     }
 
     .main-container img {
@@ -56,20 +57,20 @@
     }
 
     h1 {
-        font-size: 40px;
-        font-family: Termina-Light;
+        font-size: 30px;
+        font-family: Termina-ExtraLight;
     }
 
     p {
-        font-size: 25px;
-        font-family: Termina-Light;
+        font-size: 18px;
+        font-family: Termina-ExtraLight;
         
     }
 
     .quienes-p{
         margin-top: 50px;
         line-height: 2;
-        font-size: 25px;
+        font-size: 18px;
         
     }
 
@@ -80,6 +81,7 @@
 
     .prod-proc p {
         margin: unset;
+        line-height: 2;
     }
 
     .col1,

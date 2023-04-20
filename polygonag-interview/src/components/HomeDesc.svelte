@@ -4,7 +4,7 @@
         </div>
         <div class="col2">
             <h2>PROYECTOS UNICOS</h2>
-            <p>Vim es una empresa dedicada al suministro e instalación de vidrio, aluminio y PVC para el sector residencial en México.</p>
+            <p>Vim es una empresa dedicada al suministro e instalacion de vidrio, aluminio y PVC para el sector residencial en Mexico.</p>
         </div>
     </div>
 </main>
@@ -34,20 +34,21 @@
 
         .col2{
             display: flex;
-            align-items: center;
             padding: 0 166px 0 1.5em;
-            font-family: Termina-Light;
-            font-size: 25px;
+            font-family: Termina-ExtraLight;
+            font-size: 18px;
             border-bottom: 1px solid grey;
+            text-align: left;
         }
 
         h2 {
-            font-family: Termina-Light;
-            font-size: 40px;
+            font-family: Termina-ExtraLight;
+            font-size: 30px;
             margin-bottom: 0.5em;
         }
 
         p {
-            margin: unset
+            margin: unset;
+            line-height: 2;
         }
 </style>

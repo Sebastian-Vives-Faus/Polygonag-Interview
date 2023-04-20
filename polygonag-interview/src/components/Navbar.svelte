@@ -22,6 +22,8 @@
                     Proyectos
                 {:else if $router == 3}
                     Nosotros
+                {:else if $router == 4}
+                    Contacto
                 {/if}
                 <span class="material-symbols-outlined" on:click={() => {router.set(1)}}>
                     menu

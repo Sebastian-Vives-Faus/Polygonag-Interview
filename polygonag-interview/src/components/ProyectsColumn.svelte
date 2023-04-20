@@ -1,7 +1,7 @@
 <script>
-    import Proyect1 from '/Enmascarar grupo 1@2x.png'
-    import Proyect2 from '/Enmascarar grupo 2@2x.png'
-    import Proyect3 from '/Enmascarar grupo 3@2x.png'
+    import Proyect1 from '/Component 12 – 1@2x.png'
+    import Proyect2 from '/Component 14 – 1@2x.png'
+    import Proyect3 from '/Component 15 – 1.png'
     import MediaQuery from '../lib/MediaQuery.svelte';
 
     import { router } from '../stores/router'
@@ -9,13 +9,13 @@
 
     let proyects = [
         {
-            id: 1, name: 'Valle de Bravo', img: Proyect1
+            id: 1, name: 'Privee, CDMX', img: Proyect1
         },
         {
-            id: 2, name: 'Ciudad de Mexico', img: Proyect2
+            id: 2, name: 'Rio Escondido, CDMX', img: Proyect2
         },
         {
-            id: 3, name: 'Ciudad de Mexico', img: Proyect3
+            id: 3, name: 'Montage, Los Cabos', img: Proyect3
         }
     ]
 </script>
@@ -102,10 +102,6 @@
     
 
     @media only screen and (min-width: 750px) {
-        div {
-            border: 1px solid purple;
-        }
-        
         .proyect-container img{
             max-height: 700px;
         }
