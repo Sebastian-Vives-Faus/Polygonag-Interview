@@ -3,23 +3,23 @@
     import State1 from '/Mask Group 34@2x.png'
     import State2 from '/Core-70-Industrial-Sin-Fondo@2x.png'
     import State3 from '/2_55@2x.png'
-    import '/CoreVisionPlusSliding_2@2x.png'    
-    import '/CoreVisionPlusSliding_3@2x.png'    
-    import '/CoreVisionPlusSliding_4@2x.png'
-    import '/2399.cor.70.inddustrial@2x.png'    
-    import '/2400.cor.70industrial@2x.png'    
-    import '/2401.cor70industrial2@2x.png'
-    import '/98.20111404@2x.png'     
-    import '/589.alien3@2x.png'     
-    import '/747.esporles5@2x.png'
+    import State1Img1 from '/CoreVisionPlusSliding_2@2x.png'    
+    import State1Img2 from '/CoreVisionPlusSliding_3@2x.png'    
+    import State1Img3 from '/CoreVisionPlusSliding_4@2x.png'
+    import State2Img1 from '/2399.cor.70.inddustrial@2x.png'    
+    import State2Img2 from '/2400.cor.70industrial@2x.png'    
+    import State2Img3 from '/2401.cor70industrial2@2x.png'
+    import State3Img1 from '/98.20111404@2x.png'     
+    import State3Img2 from '/589.alien3@2x.png'     
+    import State3Img3 from '/747.esporles5@2x.png'
 
     let stateIndex = 0;
 
     let stateExtras = [
         {
-            img1: '/CoreVisionPlusSliding_2@2x.png',      
-            img2: '/CoreVisionPlusSliding_3@2x.png',      
-            img3: '/CoreVisionPlusSliding_4@2x.png',
+            img1: State1Img1,      
+            img2: State1Img2,      
+            img3: State1Img3,
             title: 'Cor Vision Plus',
             acristalamiento: '54',
             dimensiones: '4.00 x 4.00',
@@ -27,9 +27,9 @@
             
         },
         {
-            img1: '/2399.cor.70.inddustrial@2x.png',      
-            img2: '/2400.cor.70industrial@2x.png',      
-            img3: '/2401.cor70industrial2@2x.png',
+            img1: State2Img1,      
+            img2: State2Img2,      
+            img3: State2Img3,
             title: 'Core 70 Industrial',
             acristalamiento: '55',
             dimensiones: '1.50 x 2.60',
@@ -37,9 +37,9 @@
             
         },
         {
-             img1: '/98.20111404@2x.png',       
-             img2: '/589.alien3@2x.png',       
-             img3: '/747.esporles5@2x.png',
+             img1: State3Img1,       
+             img2: State3Img2,       
+             img3: State3Img3,
              title: 'Cor Vision',
              acristalamiento: '30',
              dimensiones: '2.50 x 3.00',
