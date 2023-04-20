@@ -3,7 +3,15 @@
     import State1 from '/Mask Group 34@2x.png'
     import State2 from '/Core-70-Industrial-Sin-Fondo@2x.png'
     import State3 from '/2_55@2x.png'
-    
+    import '/CoreVisionPlusSliding_2@2x.png'    
+    import '/CoreVisionPlusSliding_3@2x.png'    
+    import '/CoreVisionPlusSliding_4@2x.png'
+    import '/2399.cor.70.inddustrial@2x.png'    
+    import '/2400.cor.70industrial@2x.png'    
+    import '/2401.cor70industrial2@2x.png'
+    import '/98.20111404@2x.png'     
+    import '/589.alien3@2x.png'     
+    import '/747.esporles5@2x.png'
 
     let stateIndex = 0;
 

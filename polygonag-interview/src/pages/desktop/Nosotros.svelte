@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <div class="main-container">
+    <div class="main-container vimvim">
         <img src={VimVimVim} alt="Vim Vim Vim" height="425px"/>
     </div>
 </main>
@@ -45,6 +45,11 @@
         border-bottom: 1px solid grey;
         background-color: white;
         height: 70vh;
+    }
+
+    .vimvim {
+        display: flex;
+        justify-content: center;
     }
 
     .main-container img {
