@@ -8,6 +8,9 @@
   import NosotrosMobile from './pages/mobile/Nosotros.svelte';
   import ContactanosMobile from './pages/mobile/Contactanos.svelte';
   import MediaQuery from './lib/MediaQuery.svelte';
+  import SeriesUnicas from './components/SeriesUnicas.svelte';
+  import DesktopFooter from './components/DesktopFooter.svelte';
+  import NosotrosDesktop from './pages/desktop/Nosotros.svelte';
   
   let y;
     
@@ -34,7 +37,7 @@
           <HomeMobile/>
           <ProyectsColumn/>
           <div class="footer">
-            Ver mas proyectos <span class="material-symbols-outlined" on:click={() => {document.body.scrollIntoView();router.set(2);}}>
+            Ver mas proyectos <span class="material-symbols-outlined" on:click={() => {window.scrollTo(0, 0);router.set(2);}}>
               arrow_forward
               </span>
           </div>
@@ -45,7 +48,7 @@
         <Navbar/>  
         <ProyectsColumn/>
         <div class="footer">
-          <span class="material-symbols-outlined" on:click={() => {document.body.scrollIntoView();router.set(0);}}>
+          <span class="material-symbols-outlined" on:click={() => {window.scrollTo(0, 0);router.set(0);}}>
             arrow_back
             </span> Regresar
         </div>
@@ -53,7 +56,7 @@
         <Navbar/>  
         <NosotrosMobile/>
         <div class="footer">
-          <span class="material-symbols-outlined" on:click={() => {document.body.scrollIntoView();router.set(0);}}>
+          <span class="material-symbols-outlined" on:click={() => {window.scrollTo(0, 0);router.set(0);}}>
             arrow_back
             </span> Regresar
         </div>
@@ -61,7 +64,7 @@
         <Navbar/>  
         <ContactanosMobile/>
         <div class="footer">
-          <span class="material-symbols-outlined" on:click={() => {document.body.scrollIntoView();router.set(0);}}>
+          <span class="material-symbols-outlined" on:click={() => {window.scrollTo(0, 0);router.set(0);}}>
             arrow_back
             </span> Regresar
         </div>
@@ -70,18 +73,38 @@
     {:else}
         <!-- DESKTOP -->
         {#if routerApp === 0}
-        <Navbar/>  
-        <HomeDesktop/>
-        <ProyectsColumn/>
-
+          <Navbar/>  
+          <HomeDesktop/>
+          <ProyectsColumn/>
+          <SeriesUnicas/>
+          <DesktopFooter />
         {:else if routerApp === 1}
-        <NavbarMenuMobile />
+          <NavbarMenuMobile />
+        {:else if routerApp === 2}
+          <Navbar/>
+          <ProyectsColumn/>
+          <div class="footer">
+            Regresar <span class="material-symbols-outlined" on:click={() => {window.scrollTo(0, 0);router.set(0);}}>
+              arrow_back
+              </span>
+          </div>
+        {:else if routerApp === 3}
+          <Navbar/>  
+          <NosotrosDesktop />
+          <div class="footer">
+            Regresar <span class="material-symbols-outlined" on:click={() => {window.scrollTo(0, 0);router.set(0);}}>
+              arrow_back
+              </span>
+          </div>
         {/if}
     {/if}
   </MediaQuery>
 </main>
 
 <style>
+  
+  
+  
   .footer {
     height: 50px;
     display: flex;
@@ -91,5 +114,16 @@
     align-items: center;
   }
 
-  
+  @media only screen and (min-width: 750px) {
+    .footer {
+      justify-content: end;
+      padding: 0 166px;
+      font-family: 'Termina-Light';
+      font-size: 17px;
+    }
+
+    .footer span {
+      margin-left: 0.5em;
+    }
+  }
 </style>
