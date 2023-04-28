@@ -22,7 +22,7 @@
 
 <main>
     <MediaQuery query="(max-width: 750px)" let:matches> 
-        {#if matches}
+        <!-- {#if matches}
         <div class="main-container {$router == 0 ? 'home-margin' : 'proyects-margin'}">
             {#each proyects as proyect}
             <div class="proyect-container">
@@ -33,7 +33,7 @@
             </div>
             {/each}
         </div>
-        {:else}
+        {:else} -->
         
         <div class="main-container {$router == 0 ? 'home-margin' : 'proyects-margin'}">
             {#if $router == 0}
@@ -44,17 +44,23 @@
                 <img src={proyect.img} alt="{proyect.name}" />
                 <div class="proyect-title-container">
                     <p>{proyect.name}</p>
+                    {#if matches}
+                    <span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                    {:else}
                     <div class="proyect-title-right">
                         <p>Ver Proyecto </p>
                         <span class="material-symbols-outlined">
                             arrow_forward
                         </span>
                     </div>
+                    {/if}
                 </div>
             </div>
             {/each}
         </div>
-        {/if}
+        <!-- s -->
     </MediaQuery>
 </main>
 
@@ -65,6 +71,11 @@
        /*  margin-top: 550px; */
         z-index: 1;
         position: relative;
+        
+    }
+
+    .footer {
+        display: none;
     }
 
     p {
@@ -73,7 +84,8 @@
     }
 
     .home-margin {
-        margin-top: 550px;
+        margin-top: 100vh;
+        width: 100%;
     }
 
     .proyects-margin {
@@ -82,6 +94,8 @@
 
     .proyect-container img {
         width: 100% ;
+        height: 400px;
+        object-fit: cover;
     }
 
     .proyect-container {
@@ -96,9 +110,18 @@
     }
 
     .proyect-title-container{
-        height: 100px;
+        position: relative;
+        top: -56px;
+        color: white;
+        display: flex;
+        padding: 0 1em;
+        justify-content: space-between;
     }
 
+    
+    .proyect-title-container span {
+        line-height: 2.3 !important;
+    }
     
 
     @media only screen and (min-width: 750px) {
@@ -134,6 +157,7 @@
 
         .proyect-title-right{
             display: flex;
+            cursor: pointer;
         }
 
         .proyect-title-right span {

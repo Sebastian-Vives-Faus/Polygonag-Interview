@@ -9,6 +9,7 @@
             </span>
     </div>
     <div class="menu-container">
+        <p on:click={() => {document.body.scrollIntoView();router.set(0);}}>Home</p>
         <p on:click={() => {document.body.scrollIntoView();router.set(3);}}>Nosotros</p>
         <p on:click={() => {document.body.scrollIntoView();router.set(2);}}>Proyectos</p>
         <p on:click={() => {document.body.scrollIntoView();router.set(4);}}>Contacto</p>

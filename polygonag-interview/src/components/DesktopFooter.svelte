@@ -19,6 +19,25 @@
 </main>
 
 <style>
+    @media only screen and (max-width: 768px) {
+        .top-hr{
+            display: none;
+        }
+
+        .main-container{
+            padding: 0 1em !important;
+            text-align: start !important;
+            align-items: flex-start !important;
+        }
+        h1 {
+            font-size: 16px !important;
+        }
+
+        p {
+            font-size: 12px !important;
+            cursor: pointer;
+        }
+    }
     .top-hr {
         width: 100%;
         height: 150px;
@@ -47,5 +66,6 @@
     p {
         font-family: Termina-Light;
         font-size: 18px;
+        cursor: pointer;
     }
 </style>

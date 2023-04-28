@@ -27,51 +27,7 @@
 </script>
 <svelte:window on:scroll={updateY} bind:scrollY={y}/>
 <main>
-  <MediaQuery query="(max-width: 750px)" let:matches> 
-    {#if matches}
-    <!-- MOBILE -->
-      {#if routerApp === 0}
-        {#if y > 300 }
-          <Navbar/>
-        {/if}
-        <div>
-          <HomeMobile/>
-          <ProyectsColumn/>
-          <div class="footer">
-            Ver mas proyectos <span class="material-symbols-outlined" on:click={() => {window.scrollTo(0, 0);router.set(2);}}>
-              arrow_forward
-              </span>
-          </div>
-        </div>
-      {:else if routerApp === 1}
-        <NavbarMenuMobile />
-      {:else if routerApp === 2}
-        <Navbar/>  
-        <ProyectsColumn/>
-        <div class="footer">
-          <span class="material-symbols-outlined" on:click={() => {window.scrollTo(0, 0);router.set(0);}}>
-            arrow_back
-            </span> Regresar
-        </div>
-      {:else if routerApp === 3}
-        <Navbar/>  
-        <NosotrosMobile/>
-        <div class="footer">
-          <span class="material-symbols-outlined" on:click={() => {window.scrollTo(0, 0);router.set(0);}}>
-            arrow_back
-            </span> Regresar
-        </div>
-      {:else if routerApp === 4}
-        <Navbar/>  
-        <ContactanosMobile/>
-        <div class="footer">
-          <span class="material-symbols-outlined" on:click={() => {window.scrollTo(0, 0);router.set(0);}}>
-            arrow_back
-            </span> Regresar
-        </div>
-      {/if}
-
-    {:else}
+  <MediaQuery query="(max-width: 750px)" let:matches>
         <!-- DESKTOP -->
         {#if routerApp === 0}
           <Navbar/>  
@@ -84,25 +40,32 @@
         {:else if routerApp === 2}
           <Navbar/>
           <ProyectsColumn/>
-          <div class="footer">
-            Regresar <span class="material-symbols-outlined" on:click={() => {window.scrollTo(0, 0);router.set(0);}}>
+          {#if !matches}
+          <div class="footer" on:click={() => {window.scrollTo(0, 0);router.set(0);}}>
+            Regresar <span class="material-symbols-outlined">
               arrow_back
               </span>
           </div>
+          {:else}
+            <DesktopFooter />
+          {/if}
         {:else if routerApp === 3}
           <Navbar/>  
           <NosotrosDesktop />
-          <div class="footer">
-            Regresar <span class="material-symbols-outlined" on:click={() => {window.scrollTo(0, 0);router.set(0);}}>
+          {#if !matches}
+          <div class="footer" on:click={() => {window.scrollTo(0, 0);router.set(0);}}>
+            Regresar <span class="material-symbols-outlined">
               arrow_back
               </span>
           </div>
+          {:else}
+            <DesktopFooter />
+          {/if}
         {:else if routerApp === 4}
         <Navbar/>
         <ContactanosDesktop />
         {/if}
-    {/if}
-  </MediaQuery>
+      </MediaQuery>
 </main>
 
 <style>
@@ -116,6 +79,7 @@
     font-size: 14px;
     font-family: 'Termina-Medium';
     align-items: center;
+    cursor: pointer;
   }
 
   @media only screen and (min-width: 750px) {

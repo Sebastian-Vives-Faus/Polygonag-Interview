@@ -1,10 +1,12 @@
 <script>
     import HomeDesc from "../../components/HomeDesc.svelte";
     import VimVimVim from "/vimvimvim.png"
+    import MediaQuery from '../../lib/MediaQuery.svelte';
 </script>
 
 <main>
     <HomeDesc />
+    <MediaQuery query="(max-width: 750px)" let:matches>
     <div class="main-container">
         <div class="quienes-somos">
             <h1>QUIENES SOMOS</h1>
@@ -12,15 +14,18 @@
             <div class="quienes-p">Con el apoyo de Vitrocanceles y de la mano de los mejores proveedores en el mercado, logramos ofrecer a nuestros clientes un servicio integral de principio a fin.</div>
         </div>
     </div>
+    {#if matches}
+        <div class="extra-img"></div>
+    {/if}
     <div class="prod-proc">
-        <div class="col1">
+        <div class="{matches ? 'col' : 'col1'}">
             <h1>PRODUCTOS</h1>
             <p>Cancelería en Aluminio</p>
             <p>Domos</p>
             <p>Canceles de Baño</p>
             <p>Barandales</p>
         </div>
-        <div class="col2">
+        <div class="{matches ? 'col row2' : 'col2'}">
             <h1>PROCESOS</h1>
             <p>Esmerilado</p>
             <p>Insulado</p>
@@ -32,13 +37,59 @@
             <p>Lunas</p>
         </div>
     </div>
-
-    <div class="main-container vimvim">
-        <img src={VimVimVim} alt="Vim Vim Vim" height="425px"/>
-    </div>
+    {#if !matches}
+        <div class="main-container vimvim">
+            <img src={VimVimVim} alt="Vim Vim Vim" height="425px"/>
+        </div>
+    {/if}
+    </MediaQuery>
 </main>
 
 <style>
+
+    @media only screen and (max-width: 768px) {
+        .main-container{
+            padding: 3em 2em !important;
+            height: auto !important;
+        }
+
+        .extra-img {
+            background: url('/2128.dsc0588.jpg@2x.png');
+           background-position: center;
+            background-size: cover;
+            height: 450px;
+        }
+
+        h1 {
+            font-size: 20px !important;
+        }
+
+        p {
+            font-size: 14px !important;
+        }
+        .quienes-p {
+            font-size: 14px !important;
+            margin-top: 1em !important;
+        }
+        
+        .quienes-somos{
+            padding: unset !important;
+        }
+
+        .col {
+            padding: 3em 2em;
+            height: auto;
+            text-align: center;
+        }
+
+        .row2{
+            background-color: rgba(230, 230, 230, 0.27);
+        }
+
+        .prod-proc{
+            flex-direction: column;
+        }
+    }
     .main-container {
         padding: 0 166px;
         font-family: Termina-ExtraLight;

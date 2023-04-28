@@ -13,6 +13,23 @@
     </div>
 </main>
 <style>
+    @media only screen and (max-width: 768px) {
+        h1 {
+            font-size: 20px !important;
+        }
+
+        .main-input, .enviar{
+            font-size: 14px !important;
+        }
+
+        .enviar {
+            align-items: center;
+        }
+
+        .main-container {
+            padding: 0 2em !important;
+        }
+    }
     .main-input {
         background-color: unset;
         border: unset;

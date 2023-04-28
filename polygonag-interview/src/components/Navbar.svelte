@@ -51,12 +51,12 @@
 
     .navbar-contianer img {
         width: 63px;
-        margin-left: 17px;
+        margin-left: 2em;
     }
 
     .navbar-contianer span {
         font-size: 34px;
-        margin-right: 17px;
+        margin-right: 1em;
     }
 
     @media only screen and (min-width: 750px) {

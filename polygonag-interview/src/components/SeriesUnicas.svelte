@@ -12,7 +12,7 @@
     import State3Img1 from '/98.20111404@2x.png'     
     import State3Img2 from '/589.alien3@2x.png'     
     import State3Img3 from '/747.esporles5@2x.png'
-
+    import MediaQuery from '../lib/MediaQuery.svelte';
     let stateIndex = 0;
 
     let stateExtras = [
@@ -51,6 +51,7 @@
 </script>
 
 <main>
+    <MediaQuery query="(max-width: 750px)" let:matches>
 <div class="main-container">
     <div class="title">
         <h1>SERIES UNICAS</h1>
@@ -74,6 +75,21 @@
           </Carousel>
     </div>
     <div class="footer">
+        {#if matches} 
+        <div class="col-r">
+            <h2>{stateExtras[stateIndex].title}</h2>
+            <p>Acristalamiento maximo {stateExtras[stateIndex].acristalamiento} mm.</p>
+            <p>Dimensiones maximas {stateExtras[stateIndex].dimensiones} m.</p>
+            <p>Peso maximo {stateExtras[stateIndex].peso} kg</p>
+            <p>Ensambles a 90o</p>
+            <p>Apertura manual o motorizada</p>
+        </div>
+        <div class="col-l">
+            <div class="col1" style="background-image: url({stateExtras[stateIndex].img1});"></div>
+            <div class="col1" style="background-image: url({stateExtras[stateIndex].img2});"></div>
+            <div class="col1" style="background-image: url({stateExtras[stateIndex].img3});"></div>
+        </div>
+        {:else}
         <div class="col-l">
             <div class="col1" style="background-image: url({stateExtras[stateIndex].img1});"></div>
             <div class="col1" style="background-image: url({stateExtras[stateIndex].img2});"></div>
@@ -87,12 +103,69 @@
             <p>Ensambles a 90o</p>
             <p>Apertura manual o motorizada</p>
         </div>
+        {/if}
     </div>
 </div>
+</MediaQuery>
 </main>
 
 <style>
+    @media only screen and (max-width: 768px) {
+        .main-container{
+            /* display: none; */
+            height: auto !important;
+            padding: 3em 2em !important;
+        }
 
+        .footer{
+            /* display: none !important; */
+            background-color: white;
+            margin: unset !important;
+            flex-direction: column;
+            padding-bottom: 1em;
+        }
+
+        h1 {
+            font-size: 20px !important;
+        }
+        h2 {
+            font-size: 16px !important;
+        }
+
+        p {
+            font-size: 14px !important;
+        }
+
+        .footer p {
+            font-size: 12px !important;
+        }
+
+        .col-l, .col-r {
+            margin-top: 1em;
+        }
+
+        .col-l {
+            padding: 0 1em !important;
+        }
+
+        .col1 {
+            margin: unset !important;
+            height: 70px !important;;
+        }
+
+        .col-l :nth-child(2){
+            margin: 0 0.5em !important;
+        }
+
+        .carousel{
+            background-color: white;
+
+        }
+
+        .carousel-img{
+            width: 192px !important;
+        }
+    }
     .col1 {
         margin-right: 0.5em;
         width: 200px;
@@ -104,9 +177,9 @@
     .main-container {
         z-index: 1;
         position: relative;
-        height: 100vh;
+        height: 85vh;
         background-color: #E6E6E6;
-        padding: 121px 167px;
+        padding: 80px 167px;
         font-family: Termina-Light;
         
     }
@@ -119,7 +192,7 @@
     }
 
     .carousel-img {
-        width: 485px;
+        width: 441px;
         display: flex;
         justify-content: center;
     }
